@@ -1,0 +1,130 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+
+#include <iostream>
+#include <unordered_map>
+using namespace std;
+
+unordered_map<string,double> CumulantsFromMotifs(const unordered_map<string,double>& counts)
+{
+    unordered_map<string,double> cumulants;
+    return cumulants;
+}
+
+int main ()
+{
+    // Declaring umap to be of <string, double> type
+    // key will be of string type and mapped value will
+    // be of double type
+    unordered_map<string, double> countstest;
+    
+    // inserting values by using [] operator
+    countstest["node"] = 16;
+    countstest["edge"] = (16*15)*0.5;
+    countstest["wedge"] = (16*15*14)*0.25;
+    countstest["claw"] = (16*15*14*13)*0.125;
+    countstest["triangle"] = (16*15*14)*0.125;
+    countstest["line"] = (16*15*14*13)*0.125;
+    
+    // Traversing an unordered map
+    for (auto x:countstest)
+        cout << x.first << " " << x.second << endl;
+
+
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// #include <iostream>
+// #include <unordered_map>
+// using namespace std;
+
+// // int main()
+// // {
+// // absl::StatusOr<std::flat_hash_map<std::string,double>> CumulantsFromMotifs(const std::flat_hash_map<std::string,double>& counts) {
+// unordered_map<string,double> CumulantsFromMotifs(const unordered_map<string,double>& counts) {
+//     unordered_map<string,double> cumulants;
+//     return cumulants;
+// }
+
+
+// unordered_map<string,double> ntest;
+// ntest["Nodes"] = 16;
+
+
+// // }
+
+
+
+// // Base class
+// class GraphCumulant {
+//   public:
+//       // pure virtual function providing interface framework.
+//       virtual const char* getName() = 0;
+
+//       void setWidth(int w) {
+//          width = w;
+//       }
+
+//       void setHeight(int h) {
+//          height = h;
+//       }
+
+//   protected:
+//       int width;
+//       int height;
+// };
+
+// // Derived classes
+// class EdgeCumulant: public GraphCumulant {
+//   public:
+//       const char* getName() { 
+//          return ("Edge"); 
+//       }
+// };
+
+// class WedgeCumulant: public GraphCumulant {
+//   public:
+//       const char* getName() { 
+//          return ("Wedge"); 
+//       }
+// };
+
+// int main(void) {
+//   EdgeCumulant Edge;
+//   WedgeCumulant Wedge;
+
+//   // Print the area of the object.
+//   cout << "Edge name: " << Edge.getName() << endl;
+
+//   // Print the area of the object.
+//   cout << "Wedge name: " << Wedge.getName() << endl; 
+
+//   return 0;
+// }
+
